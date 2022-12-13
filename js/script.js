@@ -3,7 +3,6 @@ $(document).ready(function () {
     $('.step').hide();
     $('.step').first().show();
 
-    const intervalAnimation = 1000;
     const indextotal = parseInt($(".step").length);
 
     function progresso(index) {
@@ -62,7 +61,7 @@ $(document).ready(function () {
         progresso(nextStep);
         passoExibido(nextStep);
 
-        setTimeout(() => $(".step:visible").hide().next().show(), intervalAnimation);
+        $(".step:visible").hide().next().show();
 
         if (parseInt(step) >= indextotal) {
             window.location.href = '../sucess.html'
@@ -82,7 +81,7 @@ $(document).ready(function () {
         progresso(prevStep);
         passoExibido(prevStep);
 
-        setTimeout(() => $(".step:visible").hide().prev().show(), intervalAnimation);
+        $(".step:visible").hide().prev().show();
 
     });
 
